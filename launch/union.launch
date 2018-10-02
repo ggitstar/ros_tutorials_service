@@ -1,0 +1,10 @@
+<launch>
+    <arg name="calcmethod" default="1"/>
+    <arg name="x" default="1"/>
+    <arg name="y" default="2"/>
+    <param name="calculation_method" value="$(arg calcmethod)"/>
+    <param name="a" value="$(arg x)"/>
+    <param name="b" value="$(arg y)"/>
+    <node pkg="ros_tutorials_service" type="service_server" name="service_server1"/>
+    <node pkg="ros_tutorials_service" type="service_client" name="service_client1"/>
+</launch>
